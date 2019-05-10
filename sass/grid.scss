@@ -1,0 +1,22 @@
+body{
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"header header header"
+                        "body body aside"
+                        "footer footer footer";
+
+    .header{
+      grid-area: header;
+    }
+    .body{
+      grid-area: body;
+    }
+    .aside{
+      grid-area: aside;
+    }
+    .footer{
+      grid-area: footer;
+    }
+  }
+}

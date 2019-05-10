@@ -1,0 +1,14 @@
+body{
+  .container{
+    .aside{
+      @include flex;
+      .aside-content{
+        margin-right: $margin;
+        margin-top: $margin;
+        margin-bottom: $margin;
+        padding: $padding;
+        @include claro;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@mixin claro{
+  color:$color-1;
+  background-color: $color-4;
+  a.link{
+    color:red;
+  }
+}
+@mixin link{
+  text-decoration: none;
+  background-color: $color-2;
+  color:$color-4;
+  width: 200px;
+  display: block;
+  text-align: center;
+  padding: 3px;
+  line-height: 2;
+  border-radius: $border;
+  font-size: 1em;
+  &:hover{
+    background-color: $color-1;
+    color:$color-3;
+    transform: scale(1.02);
+  }
+}
