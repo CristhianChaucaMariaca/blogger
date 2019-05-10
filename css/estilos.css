@@ -203,12 +203,7 @@ body .container .aside {
   body .container .aside .aside-content {
     margin-right: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    color: #40514e;
-    background-color: #e4f9f5; }
-    body .container .aside .aside-content a.link {
-      color: red; }
+    margin-bottom: 20px; }
 
 body .container .footer {
   background-color: #40514e;
