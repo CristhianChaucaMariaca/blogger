@@ -4,7 +4,7 @@ body .container {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header" "body body aside" "footer footer footer"; }
+  grid-template-areas: "header header header" "body body aside" "footer-1 footer-2 footer-3" "footer-derechos footer-derechos footer-derechos"; }
   body .container .header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -19,11 +19,23 @@ body .container {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: aside; }
-  body .container .footer {
+  body .container .footer-1 {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+    grid-area: footer-1; }
+  body .container .footer-2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: footer-2; }
+  body .container .footer-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: footer-3; }
+  body .container .footer-derechos {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
     -ms-grid-column-span: 3;
-    grid-area: footer; }
+    grid-area: footer-derechos; }
 
 * {
   margin: 0;
