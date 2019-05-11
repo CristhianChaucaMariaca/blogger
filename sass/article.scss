@@ -5,6 +5,7 @@ body{
         @include claro;
         margin: $margin;
         padding: $padding;
+        border-radius: $border;
         .article-title{
           h3{
             text-align: center;
@@ -29,6 +30,28 @@ body{
           text-align: justify;
         }
 
+      }
+      .section-article-suggestion{
+        margin: $margin;
+        .article-item-suggestion{
+          margin-bottom: $margin;
+          padding: $padding;
+          @include oscuro;
+          border-radius: $border;
+          .article-item-suggestion-title{
+            h2{
+
+              a{
+                text-decoration: none;
+              }
+            }
+          }
+          .article-item-suggestion-description{
+            p{
+              text-align: justify;
+            }
+          }
+        }
       }
     }
     .body-articles{

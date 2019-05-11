@@ -4,10 +4,18 @@
   flex-direction: row;
 }
 @mixin claro{
-  color:$color-1;
+  color:$color-f;
   background-color: $color-4;
-  a.link{
-    color:red;
+  a{
+    color:$link;
+    text-decoration: none;
+  }
+}
+@mixin oscuro{
+  background-color: $color-1;
+  color:$color-4;
+  a{
+    color:$color-2;
   }
 }
 @mixin link{
