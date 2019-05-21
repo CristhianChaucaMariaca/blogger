@@ -1,32 +1,26 @@
 body{
-  .container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:"header header header"
-                        "body body aside"
-                        "footer-1 footer-2 footer-3"
-                        "footer-derechos footer-derechos footer-derechos";
-
-    .header{
-      grid-area: header;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:"header header header"
+                            "body body aside"
+                            "footer footer footer";
+        .header{
+            grid-area: header;
+        }
+        .body{
+            grid-area: body;
+            margin-left: $margin;
+            margin-right: $margin;
+            padding: $padding;
+        }
+        .aside{
+            grid-area: aside;
+            margin-right: $margin;
+        }
+        .footer{
+            grid-area: footer;
+            padding: $padding;
+        }
     }
-    .body{
-      grid-area: body;
-    }
-    .aside{
-      grid-area: aside;
-    }
-    .footer-1{
-      grid-area: footer-1;
-    }
-    .footer-2{
-      grid-area: footer-2;
-    }
-    .footer-3{
-      grid-area: footer-3;
-    }
-    .footer-derechos{
-      grid-area: footer-derechos;
-    }
-  }
 }

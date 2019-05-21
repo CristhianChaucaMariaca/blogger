@@ -1,20 +1,24 @@
-// https://colorhunt.co/palette/85473 palette colors
+// https://colorhunt.co/palette/145544
 
 //PALETA COLORES
-$color-1:#40514e;
-$color-2: #11999e;
-$color-3: #30e3ca;
-$color-4: #e4f9f5;
+$color-1:#8adfdc;
+$color-2: #313848;
+$color-3: #735372;
+$color-4: #8f758e;
 
 $link:cian;
 
 $color-f: black;
-$color-fondo: white;
+$color-white: white;
+
 
 
 //FUENTES
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 $font: 'Roboto', sans-serif;
+$f-normal:1em;
+$f-small:0.7em;
+$f-long:1.5em;
 //ANIMACIONES
 $transition: 0.5s;
 //MARGIN & PADDING
@@ -22,4 +26,4 @@ $margin: 20px;
 $padding:20px;
 
 //RADIUS
-$border: 4px;
+$radius: 4px;

@@ -1,0 +1,11 @@
+.header
+    <b:section id="Header">
+        <b:widget id="Header1" type="Header">
+            <b:includable id="main">
+                <b:if cond="data:view.isHomepage">
+                    h1.header-title <data:title/>
+                    article.header-description <data:description/>
+                </b:if>
+            </b:includable>
+        </b:widget>
+    </b:section>

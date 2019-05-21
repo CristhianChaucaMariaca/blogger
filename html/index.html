@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/><b:skin>@import url("https://fonts.googleapis.com/css?family=Roboto");
 body .container {
   display: -ms-grid;
   display: grid;
@@ -100,3 +105,66 @@ body .container .header {
   box-shadow: 1px 1px 10px rgba(49, 56, 72, 0.3);
   height: 500px;
   border-radius: 4px; }
+    </b:skin>
+    <title><data:view.title/></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><b:section id="Header">
+<b:widget id="Header1" type="Header">
+<b:includable id="main">
+<b:if cond="data:view.isHomepage">
+        <h1 class="header-title"><data:title/></h1>
+        <article class="header-description"><data:description/></article></b:if>
+</b:includable>
+</b:widget>
+</b:section>
+      </div>
+      <div class="body"><b:section id="Body">
+<b:widget id="Blog1" type="Blog">
+<b:includable id="main">
+<b:include name="body"/>
+</b:includable>
+<b:includable id="body">
+<b:loop values="data:posts" var="post">
+<b:if cond="data:view.isHomepage">
+        <article class="article-home-item">
+          <h2 class="article-home-title"><data:post.title/></h2><a class="article-home-link" expr:href="data:post.url">Leer mas</a>
+        </article>
+        <div class="hr"></div><b:elseif cond="data:view.isPost"/>
+        <article class="article-post">
+          <h1 class="article-post-title"><data:post.title/></h1>
+          <div class="dates">
+            <time></time>
+            <cite><data:post.author/></cite>
+          </div>
+          <article class="article-post-body"><data:post.body/></article>
+          <div class="hr"></div>
+          <div class="article-post-labels"><b:loop values="data:post.labels" var="label"><a class="article-post-label" expr:href="data:lable.url"><data:label.name/></a></b:loop></div>
+        </article><b:elseif cond="data:view.isPage"/>
+<data:post.title/>
+</b:if>
+</b:loop>
+</b:includable>
+</b:widget>
+</b:section>
+      </div>
+      <div class="aside"><b:section id="Aside">
+<b:includable id="main">
+<b:include name="auth"/>
+</b:includable>
+<b:includable id="auth">
+<b:if cond="data:view.isHomepage">
+        <div class="hola">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque, laborum animi necessitatibus molestias aperiam eligendi unde pariatur dolorum dolorem veniam a corrupti repellat tempora, hic repellendus quasi fugit, delectus tempore laboriosam ipsa aliquam. Sed, placeat. Ipsam quo sit officia repellat ipsum! Alias voluptates, mollitia sed reprehenderit quaerat numquam ad.</div></b:if>
+</b:includable>
+</b:section>
+      </div>
+      <div class="footer"><b:section id="Footer">
+<b:widget-settings>
+<b:widget-setting name='copyright'>Cristhian Chauca</b:widget-setting>
+</b:widget-settings>
+</b:section>
+      </div>
+    </div>
+  </body>
+</html>

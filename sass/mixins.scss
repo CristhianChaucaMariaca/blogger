@@ -1,37 +1,15 @@
-@mixin flex{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+@mixin shadow {
+    box-shadow: 1px 1px 10px rgba($color-2, 0.3);
 }
-@mixin claro{
-  color:$color-f;
-  background-color: $color-4;
-  a{
-    color:$link;
-    text-decoration: none;
-  }
-}
-@mixin oscuro{
-  background-color: $color-1;
-  color:$color-4;
-  a{
+@mixin title-1 {
     color:$color-2;
-  }
 }
-@mixin link{
-  text-decoration: none;
-  background-color: $color-2;
-  color:$color-4;
-  width: 200px;
-  display: block;
-  text-align: center;
-  padding: 3px;
-  line-height: 2;
-  border-radius: $border;
-  font-size: 1em;
-  &:hover{
-    background-color: $color-1;
-    color:$color-3;
-    transform: scale(1.02);
-  }
+@mixin label {
+    background-color: $color-4;
+    margin-left: $margin/3;
+    margin-right: $margin/3;
+    padding: $padding/3;
+    border-radius: $radius;
+    color:$color-1;
+    font-size: $f-small;
 }

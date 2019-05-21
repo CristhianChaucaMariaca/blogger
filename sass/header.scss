@@ -1,41 +1,16 @@
 body{
-  .container{
-    position: relative;
-    .header{
-      height: 70px;
-      background-color: $color-1;
-      box-shadow:0px 3px 10px rgba(#00000057, .3);
-      position: fixed;
-      transition: 1s;
-      width: 100%;
-      .header-body{
-        line-height: 2;
-        @include flex;
-        justify-content: space-between;
-        padding-left: $padding;
-        padding-right: $padding;
-        .title-blog{
-          color:$color-4;
-          text-align: left;
-        }
-        .nav{
-          align-self: center;
-          ul{
-            width: 100%;
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            li{
-              a{
-                text-decoration: none;
-                color:$color-3;
-                margin-left: $margin;
-                font-size: 1.3em;
-              }
+    .container{
+        .header{
+            background-color:$color-1;
+            text-align: center;
+            margin-bottom: $margin;
+            padding: $padding;
+            .header-title{
+                color:$color-4;
             }
-          }
+            .header-description{
+                
+            }
         }
-      }
     }
-  }
 }

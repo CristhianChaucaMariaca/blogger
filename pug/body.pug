@@ -1,0 +1,32 @@
+.body
+    <b:section id="Body">
+        <b:widget id="Blog1" type="Blog">
+            <b:includable id="main">
+                <b:include name="body"/>
+            </b:includable>
+            <b:includable id="body">
+                <b:loop values="data:posts" var="post">
+                    <b:if cond="data:view.isHomepage">
+                        article.article-home-item
+                            h2.article-home-title <data:post.title/>
+                            a.article-home-link(expr:href="data:post.url") Leer mas
+                        .hr
+                    <b:elseif cond="data:view.isPost"/>
+                        article.article-post
+                            h1.article-post-title <data:post.title/>
+                            .dates
+                                time
+                                cite <data:post.author/>
+                            article.article-post-body <data:post.body/>
+                            .hr
+                            .article-post-labels
+                                <b:loop values="data:post.labels" var="label">
+                                    a.article-post-label(expr:href="data:lable.url") <data:label.name/>
+                                </b:loop>
+                    <b:elseif cond="data:view.isPage"/>
+                        <data:post.title/>
+                    </b:if>
+                </b:loop>
+            </b:includable>
+        </b:widget>
+    </b:section>

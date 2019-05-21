@@ -1,10 +1,36 @@
-body{
-  .container{
+.container{
     .body{
-      margin-top:70px;
+        @include shadow;
+        border-radius: $radius;
+        .article-home-item{
+            .article-home-title{
+                @include title-1;
+                text-align: left;
+            }
+        }
+        .article-post{
+            .article-post-title{
+                text-align: center;
+                @include title-1;
+            }
+            .article-post-body{
+                text-align: justify;
+                .dates{
+                    display: flex;
+                    justify-content: space-between;
+                    cite{
+                        color:$color-1;
+                    }
+                }
+            }
+            .article-post-labels{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .article-post-label{
+                    @include label;
+                }
+            }
+        }
     }
-    .aside{
-      margin-top: 70px;
-    }
-  }
 }

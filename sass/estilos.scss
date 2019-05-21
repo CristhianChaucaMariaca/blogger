@@ -1,11 +1,11 @@
 @import "variables";
 @import "grid";
-@import "general.scss";
 @import "mixins";
+@import "general";
 @import "header";
 @import "nav";
-@import "social";
 @import "body";
-@import "article";
 @import "aside";
 @import "footer";
+@import "social";
+@import "article";
